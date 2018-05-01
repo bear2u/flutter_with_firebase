@@ -65,9 +65,47 @@ class MyApp extends StatelessWidget {
               new Switch(
                 value: false,
                 onChanged: (bool value) {
-
                 },
               ),
+              new ButtonBar(
+                mainAxisSize: MainAxisSize.min,
+                children: <Widget>[
+                  new RaisedButton(
+                      child: const Text('Raised'),
+                      onPressed: () {},
+                  ),
+                  const RaisedButton(
+                      child: const Text('Disabled'),
+                      onPressed: null
+                  )
+                ],
+              ),
+              new ButtonBar(
+                mainAxisSize: MainAxisSize.min,
+                children: <Widget>[
+                  new FlatButton(
+                    child: const Text('Flat'),
+                    onPressed: () {},
+                  ),
+                  const FlatButton(
+                      child: const Text('Disabled'),
+                      onPressed: null
+                  )
+                ],
+              ),
+              new ButtonBar(
+                mainAxisSize: MainAxisSize.min,
+                children: <Widget>[
+                  new OutlineButton(
+                    child: const Text('Outline'),
+                    onPressed: () {},
+                  ),
+                  const RaisedButton(
+                      child: const Text('Disabled'),
+                      onPressed: null
+                  )
+                ],
+              )
             ],
           ),
         ),
